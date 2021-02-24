@@ -22,8 +22,7 @@ console.log(multiply(11,12));
 
 
 let myButton = document.querySelector('button');
-
-  
+myButton.style.backgroundColor = '#111111';
 
   function setUserName() {
     let myName = prompt('请输入你的名字。');
@@ -43,11 +42,20 @@ let myButton = document.querySelector('button');
     myHeading.textContent = 'Mozilla 酷毙了，' + storedName;
   }
 
-  myButton.onclick = function() {
-    setUserName();
- }
+//   myButton.onclick = function() {
+//     setUserName();
+//  }
 
 localStorage.removeItem("name");
 
+function createParagraph() {
+    let para = document.createElement('p');
+    para.textContent = '你点击了这个按钮！!';
+    document.body.appendChild(para);
+  }
 
-
+  let buttons = document.querySelectorAll('button');
+  
+    for(let i = 0; i < buttons.length ; i++) {
+      buttons[i].addEventListener('click', createParagraph);
+    }

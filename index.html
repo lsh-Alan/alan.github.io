@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body >
     <h1>Mozilla 酷毙了！</h1>
     <img src="images/firefox-icon.png" alt="Firefox 标志：一只盘旋在地球上的火狐">
 
@@ -54,7 +54,17 @@
     <button >切换  用户</button>
 
 
+    <!-- <script>
+      
+    </script> -->
+    
 
+
+<!-- defer 和 async 都不会阻塞页面渲染 但是async是无序的 如果有多个js文件可能在加载过程中次序问题出现错误 ，defer则是依次加载的 
+调用策略小结
+如果脚本无序等待页面解析，且无依赖独立运行，那么应使用async
+如果脚本需要等待页面解析，且依赖于其他脚本，调用这些脚本时应使用defer，将关联的脚本按所需顺序置于html中
+-->
     <script src="main.js" defer></script>
 
 
